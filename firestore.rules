@@ -1,0 +1,37 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function ownsDevice(deviceId) {
+      return signedIn()
+        && exists(/databases/$(database)/documents/devices/$(deviceId))
+        && get(/databases/$(database)/documents/devices/$(deviceId)).data.ownerId == request.auth.uid;
+    }
+
+    match /users/{userId} {
+      allow create: if signedIn() && request.auth.uid == userId;
+      allow read, update, delete: if signedIn() && request.auth.uid == userId;
+    }
+
+    match /devices/{deviceId} {
+      allow create: if signedIn() && request.resource.data.ownerId == request.auth.uid;
+      allow read, update, delete: if signedIn() && resource.data.ownerId == request.auth.uid;
+
+      match /compartments/{compartmentId} {
+        allow read, write: if ownsDevice(deviceId);
+      }
+
+      match /doseEvents/{eventId} {
+        allow read: if ownsDevice(deviceId);
+        allow create: if ownsDevice(deviceId)
+          && request.resource.data.status in ["taken", "missed"]
+          && request.resource.data.compartmentId is int;
+        allow update, delete: if false;
+      }
+    }
+  }
+}
