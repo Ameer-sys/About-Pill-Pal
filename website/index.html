@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Chrono-Pill is a smart 5-compartment pillbox that reminds, detects, logs, and supports caregivers."
+    />
+    <title>Chrono-Pill | Smart Pillbox</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Chrono-Pill home">
+        <span class="brand-mark">C</span>
+        <span>
+          <strong>Chrono-Pill</strong>
+          <small>Smart medication support</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#how">How it works</a>
+        <a href="#team">Team</a>
+        <a href="#status">Progress</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">5 compartments · physical alerts · automatic logs</p>
+          <h1>A pillbox that reminds, detects, and records the routine.</h1>
+          <p class="hero-text">
+            Chrono-Pill helps people manage daily medications and supplements with a connected
+            pillbox, clear reminders, reed-switch confirmation, and caregiver visibility.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#status">See the build</a>
+            <a class="button secondary" href="#how">How it works</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Chrono-Pill app and device preview">
+          <img src="assets/hero.png" alt="Chrono-Pill project visual" />
+          <div class="phone-card">
+            <div class="phone-top"></div>
+            <div class="phone-screen">
+              <p class="phone-label">Today</p>
+              <h2>Next dose</h2>
+              <strong>9:00 AM</strong>
+              <div class="slot-grid">
+                <span></span><span class="active"></span><span></span><span class="done"></span><span></span>
+              </div>
+              <p class="phone-note">Compartment 2 is ready.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Project highlights">
+        <article>
+          <strong>Physical alerts</strong>
+          <span>LED, buzzer, and vibration guide the user.</span>
+        </article>
+        <article>
+          <strong>Real confirmation</strong>
+          <span>Reed switches detect when the correct lid opens.</span>
+        </article>
+        <article>
+          <strong>Care support</strong>
+          <span>Missed-dose alerts can notify a caregiver.</span>
+        </article>
+      </section>
+
+      <section id="how" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Simple loop</p>
+          <h2>From reminder to confirmation.</h2>
+        </div>
+        <div class="steps">
+          <article>
+            <span>1</span>
+            <h3>Set the schedule</h3>
+            <p>The user chooses a compartment, enters a name, and sets one daily time.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>The box alerts</h3>
+            <p>At the scheduled time, the matching compartment lights up and the device alerts.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>The lid confirms</h3>
+            <p>When the magnet moves away from the reed switch, the system records the dose.</p>
+          </article>
+          <article>
+            <span>4</span>
+            <h3>The app updates</h3>
+            <p>Taken and missed doses appear in the history for the user or caregiver.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="status" class="section split">
+        <div>
+          <p class="eyebrow">Build status</p>
+          <h2>What we are building now.</h2>
+          <p>
+            Our current build includes a React dashboard, Firebase authentication and Firestore,
+            Flask device endpoints, and ESP32 firmware for schedule fetching, physical alerts,
+            reed-switch detection, and dose event logging.
+          </p>
+        </div>
+        <div class="feature-list">
+          <span>5 independent compartments</span>
+          <span>Schedule editing from the web app</span>
+          <span>ESP32 Wi-Fi schedule sync</span>
+          <span>Automatic taken/missed history</span>
+          <span>Caregiver alert pathway</span>
+        </div>
+      </section>
+
+      <section id="team" class="section team">
+        <p class="eyebrow">Team</p>
+        <h2>Built by first-time builders solving a real problem.</h2>
+        <p>
+          We are building Chrono-Pill to support older adults, caregivers, and anyone managing a
+          daily medication or supplement routine. The goal is a calm, reliable experience that
+          connects physical reminders with real confirmation.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <strong>Chrono-Pill</strong>
+      <span>Smart medication support · Built for real routines</span>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

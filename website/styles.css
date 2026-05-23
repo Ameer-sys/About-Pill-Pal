@@ -1,0 +1,377 @@
+:root {
+  color: #0f172a;
+  background: #eef6f8;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 15% 12%, rgba(37, 99, 235, 0.14), transparent 34rem),
+    linear-gradient(180deg, #eef6f8 0%, #f8fbff 48%, #ffffff 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem clamp(1rem, 4vw, 4rem);
+  background: rgba(255, 255, 255, 0.86);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.28);
+  backdrop-filter: blur(18px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  background: #2563eb;
+  color: white;
+  font-weight: 900;
+}
+
+.brand strong,
+.brand small {
+  display: block;
+}
+
+.brand small {
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.site-nav {
+  display: flex;
+  gap: 0.4rem;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #475569;
+}
+
+.site-nav a {
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+}
+
+.site-nav a:hover {
+  background: #e0f2fe;
+  color: #1d4ed8;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+  padding: clamp(3rem, 8vw, 7rem) clamp(1rem, 5vw, 5rem);
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #1d4ed8;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 1.2rem;
+  max-width: 780px;
+  font-size: clamp(3rem, 7vw, 6.7rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+.hero-text,
+.section p {
+  color: #475569;
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  border-radius: 18px;
+  padding: 0.95rem 1.35rem;
+  font-weight: 900;
+}
+
+.button.primary {
+  color: white;
+  background: #2563eb;
+  box-shadow: 0 18px 38px rgba(37, 99, 235, 0.24);
+}
+
+.button.secondary {
+  background: white;
+  color: #1d4ed8;
+  border: 1px solid #dbeafe;
+}
+
+.hero-visual {
+  position: relative;
+  min-height: 560px;
+  border-radius: 42px;
+  overflow: hidden;
+  background: #dff3f5;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.18);
+}
+
+.hero-visual img {
+  width: 100%;
+  height: 100%;
+  min-height: 560px;
+  object-fit: cover;
+  opacity: 0.82;
+}
+
+.phone-card {
+  position: absolute;
+  right: clamp(1rem, 4vw, 3rem);
+  bottom: clamp(1rem, 4vw, 3rem);
+  width: min(280px, 75%);
+  border: 9px solid #0f172a;
+  border-radius: 38px;
+  background: white;
+  padding: 0.8rem;
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.28);
+}
+
+.phone-top {
+  width: 96px;
+  height: 20px;
+  margin: 0 auto 0.6rem;
+  border-radius: 999px;
+  background: #0f172a;
+}
+
+.phone-screen {
+  border-radius: 28px;
+  background: #f8fafc;
+  padding: 1rem;
+}
+
+.phone-label,
+.phone-note {
+  color: #64748b;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.phone-screen h2 {
+  margin: 0.1rem 0;
+  font-size: 1.55rem;
+}
+
+.phone-screen strong {
+  font-size: 2rem;
+}
+
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.4rem;
+  margin: 1rem 0;
+}
+
+.slot-grid span {
+  display: block;
+  height: 54px;
+  border-radius: 16px;
+  background: white;
+}
+
+.slot-grid .active {
+  background: #fde68a;
+}
+
+.slot-grid .done {
+  background: #bbf7d0;
+}
+
+.trust-strip,
+.section {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: clamp(2rem, 6vw, 5rem) clamp(1rem, 4vw, 2rem);
+}
+
+.trust-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.trust-strip article,
+.steps article,
+.feature-list span,
+.team {
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 28px;
+  background: white;
+  padding: 1.4rem;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.06);
+}
+
+.trust-strip strong,
+.trust-strip span {
+  display: block;
+}
+
+.trust-strip span {
+  margin-top: 0.4rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 1.5rem;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.steps span {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 15px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-weight: 900;
+}
+
+.steps h3 {
+  margin: 1rem 0 0.55rem;
+  font-size: 1.2rem;
+}
+
+.steps p {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.feature-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.feature-list span {
+  color: #0f172a;
+  font-weight: 900;
+}
+
+.team {
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem clamp(1rem, 4vw, 4rem);
+  color: #64748b;
+  border-top: 1px solid rgba(148, 163, 184, 0.24);
+}
+
+footer strong {
+  color: #0f172a;
+}
+
+@media (max-width: 900px) {
+  .site-nav {
+    display: none;
+  }
+
+  .hero,
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual,
+  .hero-visual img {
+    min-height: 440px;
+  }
+
+  .trust-strip,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero {
+    padding-top: 2rem;
+  }
+
+  .hero-visual,
+  .hero-visual img {
+    min-height: 380px;
+  }
+}
