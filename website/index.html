@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Pill Pal is a smart 5-compartment pillbox that reminds, detects, logs, and supports caregivers."
+      content="Pill Pal is a smart pillbox that helps people remember medication with physical alerts and simple support."
     />
-    <title>Pill Pal | Smart Pillbox</title>
+    <title>Pill Pal | Smart Medication Support</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,158 +17,52 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Pill Pal home">
-        <span class="brand-mark">P</span>
-        <span>
-          <strong>Pill Pal</strong>
-          <small>Smart medication support</small>
-        </span>
-      </a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="#how">How it works</a>
-        <a href="#team">Team</a>
-        <a href="#contact">Contact</a>
-        <a href="#status">Progress</a>
-      </nav>
-    </header>
+    <main class="landing-shell">
+      <section class="intro-panel" aria-labelledby="page-title">
+        <a class="brand" href="index.html" aria-label="Pill Pal home">
+          <span class="brand-mark">P</span>
+          <span>
+            <strong>Pill Pal</strong>
+            <small>Smart medication support</small>
+          </span>
+        </a>
 
-    <main id="top">
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">5 compartments / physical alerts / automatic logs</p>
-          <h1>A pillbox that reminds, detects, and records the routine.</h1>
-          <p class="hero-text">
-            Pill Pal helps people manage daily medications and supplements with a connected
-            pillbox, clear reminders, reed-switch confirmation, and caregiver visibility.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#contact">Get updates</a>
-            <a class="button secondary" href="#how">How it works</a>
-          </div>
-        </div>
-
-        <div class="hero-visual" aria-label="Pill Pal app and device preview">
-          <img src="assets/hero.png" alt="Pill Pal project visual" />
-          <div class="phone-card">
-            <div class="phone-top"></div>
-            <div class="phone-screen">
-              <p class="phone-label">Today</p>
-              <h2>Next dose</h2>
-              <strong>9:00 AM</strong>
-              <div class="slot-grid">
-                <span></span><span class="active"></span><span></span><span class="done"></span><span></span>
-              </div>
-              <p class="phone-note">Compartment 2 is ready.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="trust-strip" aria-label="Project highlights">
-        <article>
-          <strong>Physical alerts</strong>
-          <span>LED, buzzer, and vibration guide the user.</span>
-        </article>
-        <article>
-          <strong>Real confirmation</strong>
-          <span>Reed switches detect when the correct lid opens.</span>
-        </article>
-        <article>
-          <strong>Care support</strong>
-          <span>Missed-dose alerts can notify a caregiver.</span>
-        </article>
-      </section>
-
-      <section id="how" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Simple loop</p>
-          <h2>From reminder to confirmation.</h2>
-        </div>
-        <div class="steps">
-          <article>
-            <span>1</span>
-            <h3>Set the schedule</h3>
-            <p>The user chooses a compartment, enters a name, and sets one daily time.</p>
-          </article>
-          <article>
-            <span>2</span>
-            <h3>The box alerts</h3>
-            <p>At the scheduled time, the matching compartment lights up and the device alerts.</p>
-          </article>
-          <article>
-            <span>3</span>
-            <h3>The lid confirms</h3>
-            <p>When the magnet moves away from the reed switch, the system records the dose.</p>
-          </article>
-          <article>
-            <span>4</span>
-            <h3>The app updates</h3>
-            <p>Taken and missed doses appear in the history for the user or caregiver.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="status" class="section split">
-        <div>
-          <p class="eyebrow">Build status</p>
-          <h2>What we are building now.</h2>
+        <div class="intro-copy">
+          <p class="eyebrow">Smart pillbox / reminders / care support</p>
+          <h1 id="page-title">Medication reminders made simple.</h1>
           <p>
-            Our current build includes a React dashboard, Firebase authentication and Firestore,
-            Flask device endpoints, and ESP32 firmware for schedule fetching, physical alerts,
-            reed-switch detection, and dose event logging.
+            Pill Pal is a smart pillbox built to help people remember daily medication or
+            supplements using clear physical alerts, simple tracking, and caregiver-friendly
+            support.
           </p>
         </div>
-        <div class="feature-list">
-          <span>5 independent compartments</span>
-          <span>Schedule editing from the web app</span>
-          <span>ESP32 Wi-Fi schedule sync</span>
-          <span>Automatic taken/missed history</span>
-          <span>Caregiver alert pathway</span>
+
+        <div class="mini-points" aria-label="Pill Pal highlights">
+          <span>Lights, sound, and vibration reminders</span>
+          <span>Designed for older adults and everyday routines</span>
+          <span>Built by Ishaq Ishaq Nasiru and Bheesha K.</span>
         </div>
       </section>
 
-      <section id="team" class="section team">
-        <p class="eyebrow">Team</p>
-        <h2>Built by first-time builders solving a real problem.</h2>
-        <p>
-          We are building Pill Pal to support older adults, caregivers, and anyone managing a
-          daily medication or supplement routine. The goal is a calm, reliable experience that
-          connects physical reminders with real confirmation.
-        </p>
-        <div class="team-grid" aria-label="Team contacts">
-          <article class="team-card">
-            <span class="avatar">I</span>
-            <h3>Ishaq Ishaq Nasiru</h3>
+      <section class="action-panel" aria-labelledby="contact-title">
+        <div class="team-mini">
+          <p class="eyebrow">Team contact</p>
+          <div class="team-links">
             <a href="https://www.linkedin.com/in/ishaq-ishaq-nasiru/" target="_blank" rel="noreferrer">
-              Connect on LinkedIn
+              Ishaq Ishaq Nasiru
             </a>
-          </article>
-          <article class="team-card">
-            <span class="avatar">B</span>
-            <h3>Bheesha K.</h3>
             <a href="https://www.linkedin.com/in/bheesha-k-/" target="_blank" rel="noreferrer">
-              Connect on LinkedIn
+              Bheesha K.
             </a>
-          </article>
+          </div>
         </div>
-      </section>
 
-      <section id="contact" class="section contact-section">
-        <div class="section-heading">
-          <p class="eyebrow">Stay connected</p>
-          <h2>Want updates or early access?</h2>
-          <p>
-            Leave your name and best contact. We will receive your message by email and follow up
-            when we have updates, test opportunities, or launch news.
-          </p>
-        </div>
         <form
           class="contact-form"
           action="https://formsubmit.co/ishaq.bheesha@gmail.com"
           method="POST"
         >
-          <input type="hidden" name="_subject" value="New Pill Pal interest request" />
+          <input type="hidden" name="_subject" value="New Pill Pal contact" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="false" />
           <input
@@ -176,50 +70,26 @@
             name="_next"
             value="https://ameer-sys.github.io/About-Pill-Pal/thanks.html"
           />
+          <h2 id="contact-title">Leave your contact</h2>
+          <p>Want updates, early access, or to talk with us? Send your name and best contact.</p>
           <label>
-            Full name
-            <input name="Full name" type="text" autocomplete="name" required />
+            Name
+            <input name="Name" type="text" autocomplete="name" required />
           </label>
           <label>
-            Contact
+            Email, phone, or LinkedIn
             <input
               name="Contact"
               type="text"
               autocomplete="email"
-              placeholder="Email, phone, or LinkedIn"
+              placeholder="example@email.com"
               required
             />
           </label>
-          <label>
-            I am a
-            <select name="Visitor type">
-              <option>Potential user</option>
-              <option>Caregiver or family member</option>
-              <option>Healthcare or pharmacy professional</option>
-              <option>Investor, mentor, or partner</option>
-              <option>Other</option>
-            </select>
-          </label>
-          <label>
-            Note
-            <textarea
-              name="Message"
-              rows="4"
-              placeholder="Tell us what you want to know, test, or support."
-            ></textarea>
-          </label>
-          <button class="button primary" type="submit">Save my interest</button>
-          <p class="form-note">
-            Your message goes straight to the Pill Pal team inbox.
-          </p>
+          <button class="button primary" type="submit">Send my contact</button>
+          <p class="form-note">This sends directly to the Pill Pal team inbox.</p>
         </form>
       </section>
     </main>
-
-    <footer>
-      <strong>Pill Pal</strong>
-      <span>Smart medication support / Built for real routines</span>
-    </footer>
-    <script src="script.js"></script>
   </body>
 </html>
