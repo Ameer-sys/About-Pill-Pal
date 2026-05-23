@@ -19,19 +19,22 @@
   <body>
     <main class="contact-page" aria-labelledby="contact-title">
       <section class="contact-card">
-        <a class="brand" href="index.html" aria-label="Pill Pal home">
-          <span class="brand-mark">P</span>
-          <span>
-            <strong>Pill Pal</strong>
-            <small>Contact list</small>
-          </span>
-        </a>
+        <div class="card-top">
+          <a class="brand" href="index.html" aria-label="Pill Pal home">
+            <span class="brand-mark">P</span>
+            <span>
+              <strong>Pill Pal</strong>
+              <small>Contact list</small>
+            </span>
+          </a>
+          <span class="status-pill">Early access</span>
+        </div>
 
         <div>
           <p class="eyebrow">Stay connected</p>
-          <h1 id="contact-title">Leave your contact.</h1>
+          <h1 id="contact-title">Join the Pill Pal list.</h1>
           <p class="intro-text">
-            Add your name and best contact. We will reach out with Pill Pal updates.
+            Add your name and the best way to reach you. We will follow up with updates.
           </p>
         </div>
 
@@ -50,7 +53,7 @@
           />
           <label>
             Name
-            <input name="Name" type="text" autocomplete="name" required />
+            <input name="Name" type="text" autocomplete="name" placeholder="Your name" required />
           </label>
           <label>
             Email, phone, or LinkedIn
@@ -58,11 +61,11 @@
               name="Contact"
               type="text"
               autocomplete="email"
-              placeholder="example@email.com"
+              placeholder="Email, phone number, or LinkedIn"
               required
             />
           </label>
-          <button class="button primary" type="submit">Send contact</button>
+          <button class="button primary" type="submit">Send my contact</button>
         </form>
       </section>
     </main>

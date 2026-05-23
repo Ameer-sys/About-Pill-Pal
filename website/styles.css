@@ -16,8 +16,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background:
-    radial-gradient(circle at 20% 12%, rgba(37, 99, 235, 0.16), transparent 30rem),
-    radial-gradient(circle at 80% 24%, rgba(20, 184, 166, 0.18), transparent 24rem),
+    radial-gradient(circle at 20% 12%, rgba(37, 99, 235, 0.18), transparent 30rem),
+    radial-gradient(circle at 80% 24%, rgba(20, 184, 166, 0.2), transparent 24rem),
     linear-gradient(180deg, #eef6f8 0%, #f8fbff 62%, #ffffff 100%);
 }
 
@@ -36,15 +36,49 @@ a {
 
 .contact-card,
 .thanks-card {
+  position: relative;
   display: grid;
   gap: clamp(1.2rem, 3vw, 1.8rem);
-  width: min(560px, 100%);
+  width: min(590px, 100%);
   border: 1px solid rgba(148, 163, 184, 0.24);
   border-radius: 32px;
-  background: rgba(255, 255, 255, 0.9);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(248, 251, 255, 0.92)),
+    rgba(255, 255, 255, 0.9);
   padding: clamp(1.35rem, 5vw, 2.5rem);
-  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+  overflow: hidden;
+  box-shadow: 0 28px 80px rgba(15, 23, 42, 0.14);
   backdrop-filter: blur(18px);
+}
+
+.contact-card::before,
+.thanks-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 8px;
+  background: linear-gradient(90deg, #2563eb, #14b8a6);
+}
+
+.contact-card::after {
+  content: "";
+  position: absolute;
+  right: -70px;
+  top: 76px;
+  width: 180px;
+  height: 180px;
+  border-radius: 999px;
+  background: rgba(20, 184, 166, 0.12);
+  pointer-events: none;
+}
+
+.card-top {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .brand {
@@ -57,13 +91,14 @@ a {
 .brand-mark {
   display: grid;
   place-items: center;
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   border-radius: 16px;
-  background: #2563eb;
+  background: linear-gradient(135deg, #2563eb, #14b8a6);
   color: white;
   font-size: 1.15rem;
   font-weight: 900;
+  box-shadow: 0 16px 34px rgba(37, 99, 235, 0.24);
 }
 
 .brand strong,
@@ -77,6 +112,19 @@ a {
   font-weight: 700;
 }
 
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 0.55rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
 .eyebrow {
   margin: 0 0 0.7rem;
   color: #1d4ed8;
@@ -88,7 +136,7 @@ a {
 
 h1 {
   margin: 0 0 0.8rem;
-  font-size: clamp(2.6rem, 8vw, 4.6rem);
+  font-size: clamp(2.55rem, 7vw, 4.35rem);
   line-height: 1.02;
   letter-spacing: 0;
 }
@@ -98,12 +146,18 @@ h1 {
   margin: 0;
   color: #475569;
   font-size: clamp(1.05rem, 2vw, 1.18rem);
-  line-height: 1.6;
+  line-height: 1.58;
 }
 
 .contact-form {
+  position: relative;
+  z-index: 1;
   display: grid;
   gap: 1rem;
+  border-radius: 24px;
+  background: white;
+  padding: clamp(1rem, 3vw, 1.25rem);
+  box-shadow: 0 18px 48px rgba(15, 23, 42, 0.07);
 }
 
 .contact-form label {
@@ -117,16 +171,19 @@ h1 {
 .contact-form input {
   width: 100%;
   border: 1px solid #cbd5e1;
-  border-radius: 16px;
+  border-radius: 18px;
   background: #f8fafc;
   color: #0f172a;
   font: inherit;
   font-weight: 700;
-  padding: 1rem;
+  min-height: 58px;
+  padding: 1rem 1.05rem;
   outline: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
 }
 
 .contact-form input:focus {
+  background: white;
   border-color: #2563eb;
   box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.14);
 }
@@ -142,12 +199,19 @@ h1 {
   font: inherit;
   font-weight: 900;
   cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
 }
 
 .button.primary {
   color: white;
-  background: #2563eb;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   box-shadow: 0 18px 38px rgba(37, 99, 235, 0.24);
+}
+
+.button.primary:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  transform: translateY(-1px);
+  box-shadow: 0 22px 44px rgba(37, 99, 235, 0.28);
 }
 
 .thanks-card .button {
@@ -155,8 +219,17 @@ h1 {
 }
 
 @media (max-width: 520px) {
+  .card-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   .contact-card,
   .thanks-card {
     border-radius: 24px;
+  }
+
+  .contact-form {
+    padding: 1rem;
   }
 }
