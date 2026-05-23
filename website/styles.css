@@ -86,11 +86,12 @@ a {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1fr);
-  gap: clamp(2rem, 5vw, 5rem);
+  grid-template-columns: minmax(0, 0.9fr) minmax(300px, 0.82fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
   align-items: center;
-  padding: clamp(3rem, 8vw, 7rem) clamp(1rem, 5vw, 5rem);
-  max-width: 1320px;
+  min-height: calc(100vh - 77px);
+  padding: clamp(1.6rem, 4vw, 3.2rem) clamp(1rem, 5vw, 5rem);
+  max-width: 1180px;
   margin: 0 auto;
 }
 
@@ -111,10 +112,10 @@ p {
 }
 
 h1 {
-  margin-bottom: 1.2rem;
-  max-width: 780px;
-  font-size: clamp(3rem, 7vw, 6.7rem);
-  line-height: 0.95;
+  margin-bottom: 1rem;
+  max-width: 650px;
+  font-size: clamp(2.75rem, 5.25vw, 4.9rem);
+  line-height: 1.03;
   letter-spacing: 0;
 }
 
@@ -128,15 +129,15 @@ h2 {
 .hero-text,
 .section p {
   color: #475569;
-  font-size: clamp(1.05rem, 2vw, 1.28rem);
-  line-height: 1.7;
+  font-size: clamp(1rem, 1.45vw, 1.18rem);
+  line-height: 1.62;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
-  margin-top: 2rem;
+  margin-top: 1.35rem;
 }
 
 .button {
@@ -163,45 +164,45 @@ h2 {
 
 .hero-visual {
   position: relative;
-  min-height: 560px;
-  border-radius: 42px;
+  min-height: clamp(320px, 43vw, 430px);
+  border-radius: 34px;
   overflow: hidden;
   background: #dff3f5;
-  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.18);
+  box-shadow: 0 20px 56px rgba(15, 23, 42, 0.16);
 }
 
 .hero-visual img {
   width: 100%;
   height: 100%;
-  min-height: 560px;
+  min-height: clamp(320px, 43vw, 430px);
   object-fit: cover;
   opacity: 0.82;
 }
 
 .phone-card {
   position: absolute;
-  right: clamp(1rem, 4vw, 3rem);
-  bottom: clamp(1rem, 4vw, 3rem);
-  width: min(280px, 75%);
-  border: 9px solid #0f172a;
-  border-radius: 38px;
+  right: clamp(0.85rem, 3vw, 2rem);
+  bottom: clamp(0.85rem, 3vw, 2rem);
+  width: min(230px, 72%);
+  border: 7px solid #0f172a;
+  border-radius: 32px;
   background: white;
-  padding: 0.8rem;
-  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.28);
+  padding: 0.65rem;
+  box-shadow: 0 22px 54px rgba(15, 23, 42, 0.24);
 }
 
 .phone-top {
-  width: 96px;
-  height: 20px;
+  width: 76px;
+  height: 15px;
   margin: 0 auto 0.6rem;
   border-radius: 999px;
   background: #0f172a;
 }
 
 .phone-screen {
-  border-radius: 28px;
+  border-radius: 23px;
   background: #f8fafc;
-  padding: 1rem;
+  padding: 0.85rem;
 }
 
 .phone-label,
@@ -213,11 +214,11 @@ h2 {
 
 .phone-screen h2 {
   margin: 0.1rem 0;
-  font-size: 1.55rem;
+  font-size: 1.2rem;
 }
 
 .phone-screen strong {
-  font-size: 2rem;
+  font-size: 1.55rem;
 }
 
 .slot-grid {
@@ -229,8 +230,8 @@ h2 {
 
 .slot-grid span {
   display: block;
-  height: 54px;
-  border-radius: 16px;
+  height: 42px;
+  border-radius: 13px;
   background: white;
 }
 
@@ -500,9 +501,14 @@ footer strong {
     grid-template-columns: 1fr;
   }
 
+  .hero {
+    min-height: auto;
+    padding-top: 2rem;
+  }
+
   .hero-visual,
   .hero-visual img {
-    min-height: 440px;
+    min-height: 360px;
   }
 
   .trust-strip,
@@ -514,11 +520,20 @@ footer strong {
 
 @media (max-width: 560px) {
   .hero {
-    padding-top: 2rem;
+    padding-top: 1.4rem;
+  }
+
+  h1 {
+    font-size: clamp(2.35rem, 14vw, 3.25rem);
+    line-height: 1.05;
   }
 
   .hero-visual,
   .hero-visual img {
-    min-height: 380px;
+    min-height: 320px;
+  }
+
+  .phone-card {
+    width: min(205px, 74%);
   }
 }
