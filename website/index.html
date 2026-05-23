@@ -159,20 +159,31 @@
           <p class="eyebrow">Stay connected</p>
           <h2>Want updates or early access?</h2>
           <p>
-            Leave your name and best contact. Submitting opens a GitHub issue draft for our team
-            so the information is saved with the project without exposing any secret keys.
+            Leave your name and best contact. We will receive your message by email and follow up
+            when we have updates, test opportunities, or launch news.
           </p>
         </div>
-        <form class="contact-form" id="interest-form">
+        <form
+          class="contact-form"
+          action="https://formsubmit.co/ishaq.bheesha@gmail.com"
+          method="POST"
+        >
+          <input type="hidden" name="_subject" value="New Pill Pal interest request" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://ameer-sys.github.io/About-Pill-Pal/thanks.html"
+          />
           <label>
             Full name
-            <input id="visitor-name" name="name" type="text" autocomplete="name" required />
+            <input name="Full name" type="text" autocomplete="name" required />
           </label>
           <label>
             Contact
             <input
-              id="visitor-contact"
-              name="contact"
+              name="Contact"
               type="text"
               autocomplete="email"
               placeholder="Email, phone, or LinkedIn"
@@ -181,7 +192,7 @@
           </label>
           <label>
             I am a
-            <select id="visitor-role" name="role">
+            <select name="Visitor type">
               <option>Potential user</option>
               <option>Caregiver or family member</option>
               <option>Healthcare or pharmacy professional</option>
@@ -192,15 +203,14 @@
           <label>
             Note
             <textarea
-              id="visitor-note"
-              name="note"
+              name="Message"
               rows="4"
               placeholder="Tell us what you want to know, test, or support."
             ></textarea>
           </label>
           <button class="button primary" type="submit">Save my interest</button>
-          <p class="form-note" id="form-note">
-            Your browser will open GitHub with the details filled in. You can review before sending.
+          <p class="form-note">
+            Your message goes straight to the Pill Pal team inbox.
           </p>
         </form>
       </section>

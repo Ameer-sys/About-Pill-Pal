@@ -456,6 +456,39 @@ footer strong {
   color: #0f172a;
 }
 
+.thanks-page {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 1rem;
+}
+
+.thanks-card {
+  display: grid;
+  gap: 1.1rem;
+  width: min(720px, 100%);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 32px;
+  background: white;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.14);
+}
+
+.thanks-card h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 6vw, 5rem);
+}
+
+.thanks-card p:not(.eyebrow) {
+  color: #475569;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.thanks-card .button {
+  width: fit-content;
+}
+
 @media (max-width: 900px) {
   .site-nav {
     display: none;
