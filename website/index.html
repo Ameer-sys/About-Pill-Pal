@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Chrono-Pill is a smart 5-compartment pillbox that reminds, detects, logs, and supports caregivers."
+      content="Pill Pal is a smart 5-compartment pillbox that reminds, detects, logs, and supports caregivers."
     />
-    <title>Chrono-Pill | Smart Pillbox</title>
+    <title>Pill Pal | Smart Pillbox</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,16 +18,17 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Chrono-Pill home">
-        <span class="brand-mark">C</span>
+      <a class="brand" href="#top" aria-label="Pill Pal home">
+        <span class="brand-mark">P</span>
         <span>
-          <strong>Chrono-Pill</strong>
+          <strong>Pill Pal</strong>
           <small>Smart medication support</small>
         </span>
       </a>
       <nav class="site-nav" aria-label="Main navigation">
         <a href="#how">How it works</a>
         <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
         <a href="#status">Progress</a>
       </nav>
     </header>
@@ -35,20 +36,20 @@
     <main id="top">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">5 compartments · physical alerts · automatic logs</p>
+          <p class="eyebrow">5 compartments / physical alerts / automatic logs</p>
           <h1>A pillbox that reminds, detects, and records the routine.</h1>
           <p class="hero-text">
-            Chrono-Pill helps people manage daily medications and supplements with a connected
+            Pill Pal helps people manage daily medications and supplements with a connected
             pillbox, clear reminders, reed-switch confirmation, and caregiver visibility.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#status">See the build</a>
+            <a class="button primary" href="#contact">Get updates</a>
             <a class="button secondary" href="#how">How it works</a>
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="Chrono-Pill app and device preview">
-          <img src="assets/hero.png" alt="Chrono-Pill project visual" />
+        <div class="hero-visual" aria-label="Pill Pal app and device preview">
+          <img src="assets/hero.png" alt="Pill Pal project visual" />
           <div class="phone-card">
             <div class="phone-top"></div>
             <div class="phone-screen">
@@ -131,16 +132,83 @@
         <p class="eyebrow">Team</p>
         <h2>Built by first-time builders solving a real problem.</h2>
         <p>
-          We are building Chrono-Pill to support older adults, caregivers, and anyone managing a
+          We are building Pill Pal to support older adults, caregivers, and anyone managing a
           daily medication or supplement routine. The goal is a calm, reliable experience that
           connects physical reminders with real confirmation.
         </p>
+        <div class="team-grid" aria-label="Team contacts">
+          <article class="team-card">
+            <span class="avatar">I</span>
+            <h3>Ishaq Ishaq Nasiru</h3>
+            <a href="https://www.linkedin.com/in/ishaq-ishaq-nasiru/" target="_blank" rel="noreferrer">
+              Connect on LinkedIn
+            </a>
+          </article>
+          <article class="team-card">
+            <span class="avatar">B</span>
+            <h3>Bheesha K.</h3>
+            <a href="https://www.linkedin.com/in/bheesha-k-/" target="_blank" rel="noreferrer">
+              Connect on LinkedIn
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="section-heading">
+          <p class="eyebrow">Stay connected</p>
+          <h2>Want updates or early access?</h2>
+          <p>
+            Leave your name and best contact. Submitting opens a GitHub issue draft for our team
+            so the information is saved with the project without exposing any secret keys.
+          </p>
+        </div>
+        <form class="contact-form" id="interest-form">
+          <label>
+            Full name
+            <input id="visitor-name" name="name" type="text" autocomplete="name" required />
+          </label>
+          <label>
+            Contact
+            <input
+              id="visitor-contact"
+              name="contact"
+              type="text"
+              autocomplete="email"
+              placeholder="Email, phone, or LinkedIn"
+              required
+            />
+          </label>
+          <label>
+            I am a
+            <select id="visitor-role" name="role">
+              <option>Potential user</option>
+              <option>Caregiver or family member</option>
+              <option>Healthcare or pharmacy professional</option>
+              <option>Investor, mentor, or partner</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label>
+            Note
+            <textarea
+              id="visitor-note"
+              name="note"
+              rows="4"
+              placeholder="Tell us what you want to know, test, or support."
+            ></textarea>
+          </label>
+          <button class="button primary" type="submit">Save my interest</button>
+          <p class="form-note" id="form-note">
+            Your browser will open GitHub with the details filled in. You can review before sending.
+          </p>
+        </form>
       </section>
     </main>
 
     <footer>
-      <strong>Chrono-Pill</strong>
-      <span>Smart medication support · Built for real routines</span>
+      <strong>Pill Pal</strong>
+      <span>Smart medication support / Built for real routines</span>
     </footer>
     <script src="script.js"></script>
   </body>
